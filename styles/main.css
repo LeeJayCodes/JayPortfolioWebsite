@@ -575,6 +575,11 @@ pre::after {
     font-size: var(--fs-xl);
 }
 
+.card div a {
+    text-decoration: none;
+    color: var(--background);
+}
+
 .card:hover .project-info{
     opacity: 1;
 }
