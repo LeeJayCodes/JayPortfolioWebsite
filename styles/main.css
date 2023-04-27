@@ -80,8 +80,8 @@ body {
 
 section {
     width: 100%;
-    height: 100vh;
-    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
     overflow: hidden;
 }
 .container{
@@ -566,6 +566,7 @@ pre::after {
 
 .language {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 30px;
     padding: 0;
