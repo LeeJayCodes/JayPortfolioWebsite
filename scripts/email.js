@@ -1,15 +1,28 @@
-const formBtn = document.querySelector("#form-btn");
+// const formBtn = document.querySelector("#form-btn");
 
-formBtn.addEventListener('click', (e)=>{
-    e.preventDefault();
-    let name = document.querySelector("#name").value;
-    let email = document.querySelector("#email").value;
-    let message = document.querySelector("#message").value;
+// formBtn.addEventListener('click', (e)=>{
+//     e.preventDefault();
+//     let name = document.querySelector("#name").value;
+//     let email = document.querySelector("#email").value;
+//     let message = document.querySelector("#message").value;
     
-    alert("I am sorry, this feature is currently unavailable due to error.");
+//     // alert("I am sorry, this feature is currently unavailable due to error.");
     
-    // ValidateEmail(email,name,message);
-})
+//     let nameRequired = isEmpty(name)
+//     let emailRequired = isEmpty(email)
+//     console.log(nameRequired);
+//     console.log(emailRequired);
+//     if (nameRequired == true){
+//         alert("Name field is required for sending message");
+//         return ;
+//     } else if(emailRequired == true) {
+//         alert("Email field is required for sending message");
+//         return ;
+//     } else {
+//         ValidateEmail(email,name,message);
+//     }
+    
+// })
 
 
 function ValidateEmail(email,name,message) {
@@ -19,7 +32,7 @@ function ValidateEmail(email,name,message) {
     if (email.match(emailValidRegex)) {
   
         Email.send({
-            SecureToken : "7008c1ce-9ce3-4136-ab65-8d3b3f1f0472",
+            SecureToken : "c89337a2-bb01-45d7-add1-1630fdf5098c",
             To : 'jaewoo.lee90@gmail.com',
             From : email,
             Subject : "From Jay Lee portfolio website email",
@@ -27,7 +40,7 @@ function ValidateEmail(email,name,message) {
         
         }).then(
         
-            message => alert("I received your message, I will get back to you as soon as I can.")
+            message => alert("Thank you for reaching out to me, I will get back to you as soon as I can.")
         );
     
         name = "";
@@ -43,3 +56,7 @@ function ValidateEmail(email,name,message) {
   
     }
 }
+
+function isEmpty(value){
+    return (value == null || value.length === 0);
+  }
