@@ -1,28 +1,31 @@
-// const formBtn = document.querySelector("#form-btn");
+const formBtn = document.querySelector("#form-btn");
 
-// formBtn.addEventListener('click', (e)=>{
-//     e.preventDefault();
-//     let name = document.querySelector("#name").value;
-//     let email = document.querySelector("#email").value;
-//     let message = document.querySelector("#message").value;
+formBtn.addEventListener('click', (e)=>{
     
-//     // alert("I am sorry, this feature is currently unavailable due to error.");
+    let name = document.querySelector("#name").value;
+    let email = document.querySelector("#email").value;
+    let message = document.querySelector("#message").value;
+    let emailValidRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let nameRequired = isEmpty(name)
+    let emailRequired = isEmpty(email)
+
+    if (nameRequired == true){
+        alert("Name field is required for sending message");
+        e.preventDefault();
+    } else if(emailRequired == true) {
+        alert("Email field is required for sending message");
+        e.preventDefault();
+    } else {
+
+        if(email.match(emailValidRegex)) {
+            console.log("Email submitted");
+        } else {
+            alert("Invalid Email Address!");
+        }
+
+    }
     
-//     let nameRequired = isEmpty(name)
-//     let emailRequired = isEmpty(email)
-//     console.log(nameRequired);
-//     console.log(emailRequired);
-//     if (nameRequired == true){
-//         alert("Name field is required for sending message");
-//         return ;
-//     } else if(emailRequired == true) {
-//         alert("Email field is required for sending message");
-//         return ;
-//     } else {
-//         ValidateEmail(email,name,message);
-//     }
-    
-// })
+})
 
 
 function ValidateEmail(email,name,message) {
