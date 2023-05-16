@@ -12,11 +12,11 @@ formBtn.addEventListener('click', (e)=>{
 
 function ValidateEmail(email,name,message) {
 
-    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var emailValidRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   
-    if (email.match(validRegex)) {
+    if (email.match(emailValidRegex)) {
   
-        Email.send({
+        email.send({
             SecureToken : "7008c1ce-9ce3-4136-ab65-8d3b3f1f0472",
             To : 'jaewoo.lee90@gmail.com',
             From : email,
