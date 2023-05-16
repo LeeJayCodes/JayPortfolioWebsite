@@ -5,8 +5,10 @@ formBtn.addEventListener('click', (e)=>{
     let name = document.querySelector("#name").value;
     let email = document.querySelector("#email").value;
     let message = document.querySelector("#message").value;
-
-    ValidateEmail(email,name,message);
+    
+    alert("I am sorry, this feature is currently unavailable due to error.");
+    
+    // ValidateEmail(email,name,message);
 })
 
 
