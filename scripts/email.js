@@ -16,7 +16,7 @@ function ValidateEmail(email,name,message) {
   
     if (email.match(emailValidRegex)) {
   
-        email.send({
+        Email.send({
             SecureToken : "7008c1ce-9ce3-4136-ab65-8d3b3f1f0472",
             To : 'jaewoo.lee90@gmail.com',
             From : email,
@@ -26,16 +26,18 @@ function ValidateEmail(email,name,message) {
         }).then(
         
             message => alert("I received your message, I will get back to you as soon as I can.")
-        
         );
-  
-      return true;
+    
+        name = "";
+        email = "";
+        message = "";
+        return true;
   
     } else {
   
-      alert("Invalid Email Address!");
+        alert("Invalid Email Address!");
     
-      return false;
+        return false;
   
     }
 }
